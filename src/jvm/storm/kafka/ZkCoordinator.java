@@ -56,6 +56,7 @@ public class ZkCoordinator implements PartitionCoordinator {
             for (Partition partitionId : brokerInfo) {
                 if (myOwnership(partitionId)) {
                     mine.add(partitionId);
+                    LOG.info("Partition assignment: {task:" + _taskIndex + ", partition:" + partitionId + "}");
                 }
             }
 
@@ -92,7 +93,6 @@ public class ZkCoordinator implements PartitionCoordinator {
     }
 
     private boolean myOwnership(Partition id) {
-        int val = Math.abs(id.host.hashCode() + 23 * id.partition);
-        return val % _totalTasks == _taskIndex;
+        return id.partition % _totalTasks == _taskIndex;
     }
 }
