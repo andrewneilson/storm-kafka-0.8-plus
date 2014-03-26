@@ -163,7 +163,7 @@ public class KafkaUtilsTest {
 
 
     private void createTopicAndSendMessage() {
-        createTopicAndSendMessage(null, "someValue");
+        createTopicAndSendMessage(null, "value");
     }
 
     private void createTopicAndSendMessage(String value) {

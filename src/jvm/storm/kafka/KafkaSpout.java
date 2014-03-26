@@ -77,6 +77,7 @@ public class KafkaSpout extends BaseRichSpout {
             _coordinator = new ZkCoordinator(_connections, conf, _spoutConfig, _state, context.getThisTaskIndex(), totalTasks, _uuid);
         }
 
+        /*
         context.registerMetric("kafkaOffset", new IMetric() {
             KafkaUtils.KafkaOffsetMetric _kafkaOffsetMetric = new KafkaUtils.KafkaOffsetMetric(_spoutConfig.topic, _connections);
 
@@ -106,6 +107,7 @@ public class KafkaSpout extends BaseRichSpout {
                 return concatMetricsDataMaps;
             }
         }, _spoutConfig.metricsTimeBucketSizeInSecs);
+        */
     }
 
     @Override
