@@ -5,7 +5,7 @@
     <groupId>net.wurstmeister.storm</groupId>
     <artifactId>storm-kafka-0.8-plus_2.10</artifactId>
     <packaging>jar</packaging>
-    <version>0.5.1</version>
+    <version>0.5.2</version>
     <name>storm-kafka-0.8-plus_2.10</name>
     <description>Storm module for kafka &gt; 0.8</description>
     <licenses>

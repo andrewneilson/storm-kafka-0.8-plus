@@ -56,6 +56,7 @@ public class ZkCoordinator implements PartitionCoordinator {
             for (Partition partitionId : brokerInfo) {
                 if (myOwnership(partitionId)) {
                     mine.add(partitionId);
+                    LOG.info("Partition assignment: {task:" + _taskIndex + ", partition:" + partitionId + "}");
                 }
             }
 
